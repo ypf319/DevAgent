@@ -1,0 +1,23 @@
+[project]
+name = "devagent"
+version = "0.1.0"
+dependencies = [
+    "pydantic-settings>=2.0",
+    "requests>=2.31.0",
+    "tenacity>=8.0",
+    "chromadb>=0.5.0",
+    "sentence-transformers>=2.7.0",
+    "langgraph>=0.2.0",
+    "typing_extensions>=4.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.27.0",
+    "sse-starlette>=2.1.0",
+]
+
+# 新增：命令行脚本配置
+[project.scripts]
+devagent = "devagent.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
